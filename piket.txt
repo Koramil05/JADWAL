@@ -1,19 +1,23 @@
-Peltu I Nyoman Wilmana
-Peltu Made Edi Sutrawan
-Sertu Ivantri S. Foes
-Kopda Made Eriawan
-Pelda I Made Suradnya
-Sertu Nyoman Join Amitaba
-Pelda Ketut Serangan
-Serka I Nyoman Sudita
-Serka I Nyoman Arta
-Serka Wahyu Hidayat
-Serda I Made Ariasa
-Pelda I Komang Karia
-Serda I Putu Suwidana Yasa
-Serma Mujiburrahman
-Sertu Nyoman Warsa
-Koptu Jasman
-Serma I Kadek Teges Suardana
-Serka I Made Widiasa
-Serka Satriyo
+# Format: Tanggal (DD-MM-YYYY)
+# Diikuti A: 2 nama KORAMIL HARI INI
+# Diikuti B: 2 nama KORAMIL BESOK
+# Diikuti C: 1 nama KEDIAMAN
+# Diikuti D: 1 nama MAKODIM
+
+05-06-2025
+A: Serka I Nyoman Arta, Serda Jasdaman
+B: Serka Made Dana, Serma Putu Sudira
+C: Sertu Adi Wijaya
+D: Pelda Komang Suardika
+
+07-06-2025
+A: Serma Wayan Jaya, Serda Putra Santika
+B: Serka Eka Juniarta, Sertu Yoga Mahendra
+C: Serda Gung Prabawa
+D: Serma Anom Sutrisna
+
+10-06-2025
+A: Serka Budi Wijaya, Pelda Anton Yasa
+B: Serda Bima, Pelda Dharma
+C: (Kosong)
+D: Sertu Wahyu
