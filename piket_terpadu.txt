@@ -1,6 +1,5 @@
 A. KORAMIL
-
-Hanya uji coba jadwal online dimana berada bisa lihat yang penting ada sinyal internet
+- Hanya uji coba jadwal online dimana berada bisa lihat yang penting ada sinyal internet
 -Minggu, 08 Juni 2025
 Pelda I Made Suradnya
 Serka I Nyoman Arta
