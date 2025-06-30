@@ -1,5 +1,4 @@
 #EXTM3U
-#EXTINF:0,<============================================================== Indonesia Channels ==================================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C==============================================================%20Indonesia%20Channels%20==================================================%3E
 #EXTINF:185,RCTI HD
@@ -199,7 +198,6 @@ https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_hbosign.mpd
 #EXTINF:0,Cinemax
 #EXTVLCOPT:network-caching=1000
 https://qp-pldt-live-grp-01-prod.akamaized.net/out/u/cg_cinemax.mpd
-#EXTINF:0,<=================================================== HBO Group ===========================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C===================================================%20HBO%20Group%20===========================================%3E
 #EXTINF:0,HBO
@@ -222,7 +220,6 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/HBOSignatureHD/mpd/HBOSignatureHD
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1
 #EXTVLCOPT:network-caching=1000
 https://atemecdnbalancer-voe.sysln.id/live/eds/CinemaxHD/mpd/CinemaxHD.mpd
-#EXTINF:0,<=============================================== Premium Movies =========================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C===============================================%20Premium%20Movies%20=========================================%3E
 #EXTINF:0,Hits
@@ -344,7 +341,6 @@ https://atemeshield1-voe.sysln.id/live/eds/SonyMax/mpd/SonyMax.mpd
 #EXTINF:0,Bollywood HD 
 #EXTVLCOPT:network-caching=1000
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-hd/manifest.m3u8
-#EXTINF:0,<================================================== KOREAN CHANNELS ==========================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C==================================================%20KOREAN%20CHANNELS%20==========================================%3E
 #EXTINF:0,TVN
@@ -375,7 +371,6 @@ https://op-group1-swiftservehd-1.dens.tv/h/h241/02.m3u8
 #EXTINF:0,new k-movies
 #EXTVLCOPT:network-caching=1000
 https://7732c5436342497882363a8cd14ceff4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Plex_NewMovies/playlist.m3u8?ads.wurl_channel=618&ads.wurl_name=NewMovies&ads.coppa=0&ads.us_privacy=1---&ads.psid=62274240-07e7-5d94-8dc8-ef68cf19e175&ads.targetopt=0&ads.plex_token=Tog8X6wK6iweuzGFsz6p&ads.plex_id=60d4eddab2fdec002c141131&ads.ua=okhttp%2F4.9.0&ads.app_bundle=com.plexapp.android&ads.app_store_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.plexapp.android&ads.gdpr=0&ads.consent=0&ads.device_type=handset&ads.device_id_type=
-#EXTINF:0,<============================================================ KNOWLEDGE & DOCUMENTARY ============================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C============================================================%20KNOWLEDGE%20&%20DOCUMENTARY%20============================================%3E
 #EXTINF:0,BBC Earth
@@ -428,7 +423,6 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/CGTNDocumentaryHD/mpd/CGTNDocumen
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:network-caching=1000
 https://op-group1-swiftservehd-1.dens.tv/h/h236/02.m3u8
-#EXTINF:0,<=============================== Entertainment & Lifestyle =================================================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C===============================%20Entertainment%20&%20Lifestyle%20=================================================================%3E
 #EXTINF:0,Rock Action
@@ -551,7 +545,6 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/FashionTV/mpd/FashionTV.mpd
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1
 #EXTVLCOPT:network-caching=1000
 https://atemecdnbalancer-voe.sysln.id/live/eds/CitraDangdutHD/mpd/CitraDangdutHD.mpd
-#EXTINF:0,<=========================================================== KIDS ================================================================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C===========================================================%20KIDS%20================================================================================%3E
 #EXTINF:0,Cartoonito
@@ -621,7 +614,6 @@ https://op-group1-swiftservehd-1.dens.tv/h/h201/01.m3u8
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1
 #EXTVLCOPT:network-caching=1000
 https://atemecdnbalancer-voe.sysln.id/live/eds/HoreeHD/mpd/HoreeHD.mpd
-#EXTINF:0,<=================================================== MUSIC ==========================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C===================================================%20MUSIC%20==========================================%3E
 #EXTINF:0,Music TV
@@ -726,7 +718,6 @@ https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/in
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 #EXTVLCOPT:network-caching=1000
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd
-#EXTINF:0,<========================================================= NEWS ============================================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C=========================================================%20NEWS%20============================================================%3E
 #EXTINF:0,Jakarta GlobeNews Channel
@@ -809,7 +800,6 @@ https://mediacorp-videosbclive.akamaized.net/f4abbc22204c49e2b337203b0ebbf14b/ap
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0
 #EXTVLCOPT:network-caching=1000
 https://legacy-global-cdn.visionplus.id/live/eds/RTEnglish/sa_dash/RTEnglish.mpd
-#EXTINF:0,<================================================== Christian Channels ==========================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C==================================================%20Christian%20Channels%20==========================================%3E
 #EXTINF:0,Catholic TV
@@ -850,7 +840,6 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/TBNAsia/mpd/TBNAsia.mpd
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1
 #EXTVLCOPT:network-caching=1000
 https://atemeshield1-voe.sysln.id/live/eds/PraiseHD/mpd/PraiseHD.mpd
-#EXTINF:0,<================================================= Mediacorp Singapore ======================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C=================================================%20Mediacorp%20Singapore%20======================================%3E
 #EXTINF:0,Channel 5
@@ -883,7 +872,6 @@ https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26
 #EXTINF:0,Mediacorp Entertainment China
 #EXTVLCOPT:network-caching=1000
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-chinese/manifest.m3u8
-#EXTINF:0,<======================== Malaysia ==========================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C========================%20Malaysia%20==========================%3E
 #EXTINF:0,TV 1
@@ -975,7 +963,6 @@ https://unifi-live07.secureswiftcontent.com/UnifiHD/live31.mpd
 #EXTINF:0,Oh My Ceria!
 #EXTVLCOPT:network-caching=1000
 https://b27a6dd8a86c3e4ba93fbae22aaaac64.pmqrop.channel-assembly.mediatailor.ap-southeast-1.amazonaws.com/v1/channel/FAST_7/dash.mpd
-#EXTINF:0,<============================== Brunei ======================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C==============================%20Brunei%20======================================%3E
 #EXTINF:0,RTB Sukmaindera FHD
@@ -990,7 +977,6 @@ https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist.m3u8
 #EXTVLCOPT:network-caching=1000
 #EXTVLCOPT:network-caching=1000
 https://d1211whpimeups.cloudfront.net/smil:rtbgo/chunklist_b4096000_slENG.m3u8?id=1229
-#EXTINF:0,<============================================================= CHINA ==============================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C=============================================================%20CHINA%20==============================================%3E
 #EXTINF:0,Jiangsu TV
@@ -1033,7 +1019,6 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/TVBSAsia/mpd/TVBSAsia.mpd
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1
 #EXTVLCOPT:network-caching=1000
 https://atemecdnbalancer-voe.sysln.id/live/eds/CCTV4/mpd/CCTV4.mpd
-#EXTINF:0,<=========================================== TVRI Group =========================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C===========================================%20TVRI%20Group%20=========================================%3E
 #EXTINF:0,TVRI Nasional
@@ -1135,7 +1120,6 @@ https://ott-balancer.tvri.go.id/live/eds/Jogjakarta/hls/Jogjakarta-avc1_900000=1
 #EXTINF:0,TVRI Papua Barat
 #EXTVLCOPT:network-caching=1000
 https://ott-balancer.tvri.go.id/live/eds/Pabar/hls/Pabar-avc1_500000=10007-mp4a_64000_eng=20000.m3u8
-#EXTINF:0,<======================================= Local Channels =====================================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C=======================================%20Local%20Channels%20=====================================%3E
 #EXTINF:0,Bali TV
@@ -1186,7 +1170,6 @@ https://5bf7b725107e5.streamlock.net/tvtabalong/tvtabalong/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36
 #EXTVLCOPT:network-caching=1000
 https://5bf7b725107e5.streamlock.net/bungotv/bungotv/playlist.m3u8
-#EXTINF:0,<======================= Internet Radio ===============================>
 #EXTVLCOPT:network-caching=1000
 https://raw.githubusercontent.com/hendroagung2904/JejeVISION/main/%3C=======================%20Internet%20Radio%20===============================%3E
 #EXTINF:0,Suara Surabaya FM
