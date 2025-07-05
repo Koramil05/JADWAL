@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Live TV Nasional & Lokal</title>
+  <style>
+    html, body { margin:0; padding:0; height:100%; width:100%; overflow:hidden; background:#000; color:#fff; font-family:sans-serif; }
+    iframe { position:fixed; top:0; left:0; width:100vw; height:100vh; border:none; z-index:0; }
+    .controls, #fullscreenBtn, #soundBtn, #prevBtn, #nextBtn { transition:opacity .5s; z-index:999; }
+    .hidden { opacity:0; pointer-events:none; }
+    .top-bar { position:fixed; top:0; width:100%; display:flex; flex-direction:column; background:rgba(0,0,0,0.6); padding:5px; }
+    .tabs { display:flex; gap:5px; justify-content:center; margin-bottom:5px; }
+    .tabs button { background:#444; color:#fff; border:none; padding:6px 10px; border-radius:4px; }
+    .channel-list { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; }
+    .channel-list button { background:#f44336; border:none; color:white; padding:6px 10px; font-size:13px; border-radius:4px; display:flex; align-items:center; gap:5px; }
+    .channel-list img { width:20px; height:20px; border-radius:3px; }
+    #fullscreenBtn, #soundBtn { position:fixed; bottom:10px; right:10px; margin-top:6px; background:#2196F3; color:#fff; padding:6px; border:none; border-radius:4px; }
+    #soundBtn { right:90px; background:#4CAF50; }
+    #prevBtn, #nextBtn { position:fixed; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); font-size:16px; padding:10px 16px; border:none; color:#fff; border-radius:4px; }
+    #prevBtn { left:10px; }
+    #nextBtn { right:10px; }
+  </style>
+</head>
+<body>
+  <div class="top-bar controls" id="topBar">
+    <div class="tabs">
+      <button onclick="switchCategory('nasional')">NASIONAL</button>
+      <button onclick="switchCategory('lokal')">LOKAL</button>
+    </div>
+    <div class="channel-list" id="channelList"></div>
+  </div>
+  <iframe id="liveFrame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <button id="fullscreenBtn" class="controls" onclick="goFullscreen()">🔲 Fullscreen</button>
+  <button id="soundBtn" class="controls" onclick="toggleSound()">🔈</button>
+  <button id="prevBtn" class="controls" onclick="prevChannel()">⏮</button>
+  <button id="nextBtn" class="controls" onclick="nextChannel()">⏭</button>
+
+  <script>
+    let data = {}, currentCategory = 'nasional', currentIndex = 0, muted = true;
+    const frame = document.getElementById("liveFrame");
+
+    async function loadChannels(){
+      const res = await fetch("channels.json");
+      data = await res.json();
+      switchCategory('nasional');
+    }
+
+    function switchCategory(cat){
+      currentCategory = cat;
+      currentIndex = 0;
+      renderChannels();
+      playChannel(currentIndex);
+    }
+
+    function renderChannels(){
+      const list = document.getElementById("channelList");
+      list.innerHTML = "";
+      data[currentCategory].forEach((ch,i)=>{
+        const btn = document.createElement("button");
+        const img = document.createElement("img");
+        img.src = ch.logo;
+        btn.appendChild(img);
+        btn.appendChild(document.createTextNode(ch.name));
+        btn.onclick = ()=> playChannel(i);
+        list.appendChild(btn);
+      });
+    }
+
+    function playChannel(i){
+      currentIndex = i;
+      const link = data[currentCategory][i].link;
+      const url = new URL(link);
+      if(!muted) url.searchParams.set("mute", "0");
+      else url.searchParams.set("mute", "1");
+      frame.src = url.toString();
+    }
+
+    function nextChannel(){
+      currentIndex = (currentIndex+1)%data[currentCategory].length;
+      playChannel(currentIndex);
+    }
+    function prevChannel(){
+      currentIndex = (currentIndex-1+data[currentCategory].length)%data[currentCategory].length;
+      playChannel(currentIndex);
+    }
+
+    function goFullscreen(){
+      frame.requestFullscreen?.();
+      screen.orientation?.lock("landscape").catch(()=>{});
+    }
+
+    function toggleSound(){
+      muted = !muted;
+      document.getElementById("soundBtn").innerText = muted ? "🔈" : "🔊";
+      playChannel(currentIndex);
+    }
+
+    let hideTimer;
+    const controls = document.querySelectorAll(".controls");
+    function showControls(){
+      controls.forEach(c=>c.classList.remove("hidden"));
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(()=>controls.forEach(c=>c.classList.add("hidden")), 4000);
+    }
+    function startAutoHide(){
+      document.addEventListener("mousemove", showControls);
+      document.addEventListener("touchstart", showControls);
+      showControls();
+    }
+
+    window.onload = ()=>{ loadChannels(); startAutoHide(); }
+  </script>
+</body>
+</html>
