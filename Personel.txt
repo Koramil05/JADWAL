@@ -19,7 +19,8 @@ Koptu Jasman
 
 
 
-personel_structure: [
+personel_structure: 
+
     { unit: 'KEPEMIMPINAN', jabatan: 'Danramil 1609-05/Sukasada' },
     { unit: 'KEPEMIMPINAN', jabatan: 'Tamudi' },
     { unit: 'KEPEMIMPINAN', jabatan: 'Turyan' },
