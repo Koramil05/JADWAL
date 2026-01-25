@@ -5,7 +5,7 @@
     "jabatan": "Danramil",
     "nama": "",
     "nrp": "",
-    "desa": [
+    "desa/kelurahan": [
       "Wanagiri",
       "Pancasari",
       "Gitgit",
