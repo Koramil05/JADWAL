@@ -123,41 +123,41 @@
     "id": "P13",
     "unit": "BABINSA",
     "jabatan": "Babinsa Ds. Wanagiri",
-    "nama": "Sertu Nyoman Join Amitaba",
+    "nama": "",
     "nrp": "",
-    "desa": "Wanagiri"
+    "desa": null
   },
   {
     "id": "P14",
     "unit": "BABINSA",
     "jabatan": "Babinsa Ds. Pancasari",
-    "nama": "Sertu Nyoman Warsa",
+    "nama": "",
     "nrp": "",
-    "desa": "Pancasari"
+    "desa": null
   },
   {
     "id": "P15",
     "unit": "BABINSA",
     "jabatan": "Babinsa Ds. Gitgit",
-    "nama": "Sertu I Made Ariasa",
+    "nama": "",
     "nrp": "",
-    "desa": "Gitgit"
+    "desa": null
   },
   {
     "id": "P16",
     "unit": "BABINSA",
     "jabatan": "Babinsa Ds. Pegadungan",
-    "nama": "Serda I Putu Suwidana Yasa",
+    "nama": "",
     "nrp": "",
-    "desa": "Pegadungan"
+    "desa": null
   },
   {
     "id": "P17",
     "unit": "BABINSA",
     "jabatan": "Babinsa Ds. Tegallinggah",
-    "nama": "Koptu Jasman",
+    "nama": "",
     "nrp": "",
-    "desa": "Tegallinggah"
+    "desa": null
   },
   {
     "id": "P18",
@@ -165,7 +165,7 @@
     "jabatan": "Babinsa Ds. Kayuputih",
     "nama": "",
     "nrp": "",
-    "desa": "Kayuputih"
+    "desa": null
   },
   {
     "id": "P19",
@@ -173,7 +173,7 @@
     "jabatan": "Babinsa Ds. Panji",
     "nama": "",
     "nrp": "",
-    "desa": "Panji"
+    "desa": null
   },
   {
     "id": "P20",
@@ -181,7 +181,7 @@
     "jabatan": "Babinsa Ds. Padangbulia",
     "nama": "",
     "nrp": "",
-    "desa": "Padangbulia"
+    "desa": null
   },
   {
     "id": "P21",
@@ -189,7 +189,7 @@
     "jabatan": "Babinsa Ds. Silangjana",
     "nama": "",
     "nrp": "",
-    "desa": "Silangjana"
+    "desa": null
   },
   {
     "id": "P22",
@@ -197,7 +197,7 @@
     "jabatan": "Babinsa Ds. Sambangan",
     "nama": "",
     "nrp": "",
-    "desa": "Sambangan"
+    "desa": null
   },
   {
     "id": "P23",
@@ -205,7 +205,7 @@
     "jabatan": "Babinsa Ds. Selat",
     "nama": "",
     "nrp": "",
-    "desa": "Selat"
+    "desa": null
   },
   {
     "id": "P24",
@@ -213,7 +213,7 @@
     "jabatan": "Babinsa Ds. Panjianom",
     "nama": "",
     "nrp": "",
-    "desa": "Panjianom"
+    "desa": null
   },
   {
     "id": "P25",
@@ -221,7 +221,7 @@
     "jabatan": "Babinsa Ds. Ambengan",
     "nama": "",
     "nrp": "",
-    "desa": "Ambengan"
+    "desa": null
   },
   {
     "id": "P26",
@@ -229,7 +229,7 @@
     "jabatan": "Babinsa Ds. Pegayaman",
     "nama": "",
     "nrp": "",
-    "desa": "Pegayaman"
+    "desa": null
   },
   {
     "id": "P27",
@@ -237,6 +237,6 @@
     "jabatan": "Babinsa Kel. Sukasada",
     "nama": "",
     "nrp": "",
-    "desa": "Sukasada"
+    "desa": null
   }
 ]
