@@ -19,11 +19,7 @@ Koptu Jasman
 
 
 
-folder_structure: {
-'PERSONEL': ['IJAZAH', 'KEP', 'SPRIN', 'KTP', 'KK', 'NPWP', 'BPJS', 'FOTO', 'LAINNYA'],
-    'KEGIATAN': ['LAPORAN', 'FOTO', 'VIDEO', 'DOKUMEN', 'ABSENSI', 'PROGRAM']
-  },
-  personel_structure: [
+personel_structure: [
     { unit: 'KEPEMIMPINAN', jabatan: 'Danramil 1609-05/Sukasada' },
     { unit: 'KEPEMIMPINAN', jabatan: 'Tamudi' },
     { unit: 'KEPEMIMPINAN', jabatan: 'Turyan' },
@@ -49,66 +45,3 @@ folder_structure: {
     { unit: 'BABINSA', jabatan: 'Babinsa Ds. Panjianom' },
     { unit: 'BABINSA', jabatan: 'Babinsa Ds. Ambengan' },
     { unit: 'BABINSA', jabatan: 'Babinsa Ds. Pegayaman' }
-  ]
-
-
-
-
-
-
-
-👤 DATA PERSONEL
-════════════════════════════════
-📋 NRP       : ${person.nrp}
-👤 NAMA      : ${person.nama}
-⭐ PANGKAT   : ${person.pangkat || '-'}
-🎖️ JABATAN   : ${person.jabatan}
-🏛️ UNIT      : ${person.unit}
-📞 TELEPON   : ${person.telepon || '-'}
-📧 EMAIL     : ${person.email || '-'}
-📍 ALAMAT    : ${person.alamat || '-'}
-📅 MASUK     : ${person.tanggal_masuk || '-'}
-✅ STATUS    : ${person.status}
-📁 TOTAL ARSIP: ${person.total_arsip || 0} file
-══════════════════════════
-
-
- TERINTEGRASI:
-
-📁 STRUKTUR FOLDER YANG AKAN DIBUAT:
-
-```
-Google Drive/
-├── ARSIP_KORAMIL_05/ (MAIN_FOLDER_ID)
-│   ├── personel.json
-│   ├── arsip_metadata.json
-│   ├── activity_log.json
-│   ├── 3100012301980001_LETKOL_INF_AHMAD_HIDAYAT/
-│   │   ├── PERSONEL/
-│   │   │   ├── IJAZAH/
-│   │   │   │   ├── 2024/
-│   │   │   │   │   └── 01/
-│   │   │   │   │       └── 20240124_143022_ijazah_s1.pdf
-│   │   │   ├── KEP/
-│   │   │   └── FOTO/
-│   │   └── KEGIATAN/
-│   ├── DOCUMENTS/ (DOCUMENTS_FOLDER_ID)
-│   └── BACKUPS/ (BACKUP_FOLDER_ID)
-│       └── backup_20240124_143022.json
-```
-
-🔗 API ENDPOINTS YANG SIAP:
-
-```
-POST /cek                 - Verifikasi personel
-POST /upload              - Upload file
-POST /get_personel        - Ambil semua personel
-POST /get_arsip           - Ambil arsip per NRP
-POST /get_statistics      - Statistik sistem
-POST /add_personel        - Tambah personel baru
-POST /update_personel     - Update data personel
-POST /delete_personel     - Hapus personel
-POST /search_personel     - Cari personel
-POST /backup              - Buat backup
-POST /restore             - Restore dari backup
-GET  /test                - Test koneksi
