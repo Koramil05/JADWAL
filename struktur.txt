@@ -1,30 +1,242 @@
 [
-  { "id": "KMP-01", "unit": "KEPEMIMPINAN", "jabatan": "Danramil 1609-05/Sukasada", "nama": "", "nrp": "" },
-  { "id": "KMP-02", "unit": "KEPEMIMPINAN", "jabatan": "Tamudi", "nama": "", "nrp": "" },
-  { "id": "KMP-03", "unit": "KEPEMIMPINAN", "jabatan": "Turyan", "nama": "", "nrp": "" },
-
-  { "id": "BATI-01", "unit": "BATI", "jabatan": "Bati Komsos", "nama": "", "nrp": "" },
-  { "id": "BATI-02", "unit": "BATI", "jabatan": "Bati Bakti TNI", "nama": "", "nrp": "" },
-  { "id": "BATI-03", "unit": "BATI", "jabatan": "Bati Wanwil", "nama": "", "nrp": "" },
-  { "id": "BATI-04", "unit": "BATI", "jabatan": "Bati Tuud", "nama": "", "nrp": "" },
-
-  { "id": "STAF-01", "unit": "STAF", "jabatan": "Bamin Tuud", "nama": "", "nrp": "" },
-  { "id": "STAF-02", "unit": "STAF", "jabatan": "Baur Data", "nama": "", "nrp": "" },
-  { "id": "STAF-03", "unit": "STAF", "jabatan": "Tayanrad", "nama": "", "nrp": "" },
-
-  { "id": "BBS-01", "unit": "BABINSA", "jabatan": "Babinsa Ds. Wanagiri", "nama": "", "nrp": "", "desa": "Wanagiri" },
-  { "id": "BBS-02", "unit": "BABINSA", "jabatan": "Babinsa Kel. Sukasada", "nama": "", "nrp": "", "desa": "Sukasada" },
-  { "id": "BBS-03", "unit": "BABINSA", "jabatan": "Babinsa Ds. Pancasari", "nama": "", "nrp": "", "desa": "Pancasari" },
-  { "id": "BBS-04", "unit": "BABINSA", "jabatan": "Babinsa Ds. Gitgit", "nama": "", "nrp": "", "desa": "Gitgit" },
-  { "id": "BBS-05", "unit": "BABINSA", "jabatan": "Babinsa Ds. Pegadungan", "nama": "", "nrp": "", "desa": "Pegadungan" },
-  { "id": "BBS-06", "unit": "BABINSA", "jabatan": "Babinsa Ds. Tegallinggah", "nama": "", "nrp": "", "desa": "Tegallinggah" },
-  { "id": "BBS-07", "unit": "BABINSA", "jabatan": "Babinsa Ds. Kayuputih", "nama": "", "nrp": "", "desa": "Kayuputih" },
-  { "id": "BBS-08", "unit": "BABINSA", "jabatan": "Babinsa Ds. Panji", "nama": "", "nrp": "", "desa": "Panji" },
-  { "id": "BBS-09", "unit": "BABINSA", "jabatan": "Babinsa Ds. Padangbulia", "nama": "", "nrp": "", "desa": "Padangbulia" },
-  { "id": "BBS-10", "unit": "BABINSA", "jabatan": "Babinsa Ds. Silangjana", "nama": "", "nrp": "", "desa": "Silangjana" },
-  { "id": "BBS-11", "unit": "BABINSA", "jabatan": "Babinsa Ds. Sambangan", "nama": "", "nrp": "", "desa": "Sambangan" },
-  { "id": "BBS-12", "unit": "BABINSA", "jabatan": "Babinsa Ds. Selat", "nama": "", "nrp": "", "desa": "Selat" },
-  { "id": "BBS-13", "unit": "BABINSA", "jabatan": "Babinsa Ds. Panjianom", "nama": "", "nrp": "", "desa": "Panjianom" },
-  { "id": "BBS-14", "unit": "BABINSA", "jabatan": "Babinsa Ds. Ambengan", "nama": "", "nrp": "", "desa": "Ambengan" },
-  { "id": "BBS-15", "unit": "BABINSA", "jabatan": "Babinsa Ds. Pegayaman", "nama": "", "nrp": "", "desa": "Pegayaman" }
+  {
+    "id": "P00",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": [
+      "Wanagiri",
+      "Pancasari",
+      "Gitgit",
+      "Pegadungan",
+      "Tegallinggah",
+      "Kayuputih",
+      "Panji",
+      "Padangbulia",
+      "Silangjana",
+      "Sambangan",
+      "Selat",
+      "Panjianom",
+      "Ambengan",
+      "Pegayaman",
+      "Sukasada"
+    ]
+  },
+  {
+    "id": "P01",
+    "unit": "BATI",
+    "jabatan": "Bati 1",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P02",
+    "unit": "BATI",
+    "jabatan": "Bati Tuud",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P03",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P04",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P05",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P06",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P07",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P08",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P09",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P10",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P11",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P12",
+    "unit": "KEPEMIMPINAN",
+    "jabatan": "Danramil",
+    "nama": "",
+    "nrp": "",
+    "desa": null
+  },
+  {
+    "id": "P13",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Wanagiri",
+    "nama": "Sertu Nyoman Join Amitaba",
+    "nrp": "",
+    "desa": "Wanagiri"
+  },
+  {
+    "id": "P14",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Pancasari",
+    "nama": "Sertu Nyoman Warsa",
+    "nrp": "",
+    "desa": "Pancasari"
+  },
+  {
+    "id": "P15",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Gitgit",
+    "nama": "Sertu I Made Ariasa",
+    "nrp": "",
+    "desa": "Gitgit"
+  },
+  {
+    "id": "P16",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Pegadungan",
+    "nama": "Serda I Putu Suwidana Yasa",
+    "nrp": "",
+    "desa": "Pegadungan"
+  },
+  {
+    "id": "P17",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Tegallinggah",
+    "nama": "Koptu Jasman",
+    "nrp": "",
+    "desa": "Tegallinggah"
+  },
+  {
+    "id": "P18",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Kayuputih",
+    "nama": "",
+    "nrp": "",
+    "desa": "Kayuputih"
+  },
+  {
+    "id": "P19",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Panji",
+    "nama": "",
+    "nrp": "",
+    "desa": "Panji"
+  },
+  {
+    "id": "P20",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Padangbulia",
+    "nama": "",
+    "nrp": "",
+    "desa": "Padangbulia"
+  },
+  {
+    "id": "P21",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Silangjana",
+    "nama": "",
+    "nrp": "",
+    "desa": "Silangjana"
+  },
+  {
+    "id": "P22",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Sambangan",
+    "nama": "",
+    "nrp": "",
+    "desa": "Sambangan"
+  },
+  {
+    "id": "P23",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Selat",
+    "nama": "",
+    "nrp": "",
+    "desa": "Selat"
+  },
+  {
+    "id": "P24",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Panjianom",
+    "nama": "",
+    "nrp": "",
+    "desa": "Panjianom"
+  },
+  {
+    "id": "P25",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Ambengan",
+    "nama": "",
+    "nrp": "",
+    "desa": "Ambengan"
+  },
+  {
+    "id": "P26",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Ds. Pegayaman",
+    "nama": "",
+    "nrp": "",
+    "desa": "Pegayaman"
+  },
+  {
+    "id": "P27",
+    "unit": "BABINSA",
+    "jabatan": "Babinsa Kel. Sukasada",
+    "nama": "",
+    "nrp": "",
+    "desa": "Sukasada"
+  }
 ]
