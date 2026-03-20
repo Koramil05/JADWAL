@@ -84,6 +84,36 @@
             text-shadow: 0 0 5px rgba(77, 255, 77, 0.3);
         }
 
+        /* === MARQUEE STYLE - UNTUK MENGGANTI "MUAT DATA..." === */
+        .running-text-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            margin-bottom: 15px; /* Memberi jarak dengan radar-target di bawahnya */
+        }
+        
+        .running-text {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            color: #4dff4d;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(77, 255, 77, 0.5);
+            letter-spacing: 1px;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* Pause animation on hover */
+        .running-text-container:hover .running-text {
+            animation-play-state: paused;
+        }
+
+        /* === RADAR TARGET (HANPANGAN) - TETAP PERTAHANKAN === */
         .radar-target {
             font-size: 1.2em;
             font-weight: bold;
@@ -435,6 +465,13 @@
         <div class="radar-content">
             <div class="radar-title" id="radarTitle">Koramil 1609-05/Sukasada</div>
             <div class="radar-subtitle" id="radarSubtitle">Memuat data...</div>
+            
+            <!-- RUNNING TEXT - MENGGANTI TULISAN "MUAT DATA..." -->
+            <div class="running-text-container">
+                <div class="running-text" id="runningText">Memuat teks berjalan...</div>
+            </div>
+            
+            <!-- RADAR TARGET (HANPANGAN) - TETAP PERTAHANKAN -->
             <div class="radar-target" id="radarTarget">Hanpangan hari ini : Loading...</div>
         </div>
     </div>
@@ -737,23 +774,28 @@
             HANPANGAN_URL: "https://raw.githubusercontent.com/Koramil05/JADWAL/main/hanpangan.txt",
             PIKET_URL: "https://raw.githubusercontent.com/Koramil05/JADWAL/main/piket.txt",
             BANNER_SUBTITLE_URL: "https://raw.githubusercontent.com/Koramil05/JADWAL/main/bannersubtitle.txt",
+            RUNNING_TEXT_URL: "https://raw.githubusercontent.com/Koramil05/JADWAL/main/running.txt",
             TELEGRAM_BOT_TOKEN: '7591221480:AAFjogAiM_Dywo4SHOLVphpiZQgUcq48IDc',
             TELEGRAM_CHAT_ID: "2095166318",
             CACHE_TIMEOUT: 25 * 60 * 1000, // 25 minutes
             HANPANGAN_CACHE_KEY: "hanpangan_cache",
             PIKET_CACHE_KEY: "piket_cache",
-            BANNER_SUBTITLE_CACHE_KEY: "banner_subtitle_cache"
+            BANNER_SUBTITLE_CACHE_KEY: "banner_subtitle_cache",
+            RUNNING_TEXT_CACHE_KEY: "running_text_cache"
         };
 
         // ======================== STATE MANAGEMENT ========================
         const AppState = {
             currentHanpangan: "",
             currentBannerSubtitle: "",
+            currentRunningText: "",
             isOnline: navigator.onLine,
             daftarNama: [["", ""]],
             initialized: false,
             bannerSubtitleLines: [],
+            runningTextLines: [],
             currentSubtitleIndex: 0,
+            currentRunningIndex: 0,
             init: function() {
                 this.initialized = true;
             },
@@ -822,16 +864,68 @@
 
         // ======================== RADAR DISPLAY SERVICE ========================
         const RadarService = {
-            updateRadarDisplay: function(title, subtitle, target) {
+            updateRadarDisplay: function(title, subtitle) {
                 document.getElementById('radarTitle').textContent = title || "Koramil 1609-05/Sukasada";
                 document.getElementById('radarSubtitle').textContent = subtitle || "Sistem Informasi Jadwal Piket";
-                document.getElementById('radarTarget').textContent = target || "Memuat data hanpangan...";
             },
             updateHanpanganDisplay: function(hanpangan) {
                 const displayText = AppState.isOnline ? 
                     `Hanpangan hari ini: ${hanpangan || "Data kosong"}` : 
                     `Hanpangan: ${hanpangan || "Data tersimpan"} (Mode Offline)`;
                 document.getElementById('radarTarget').textContent = displayText;
+            },
+            updateRunningText: function(text) {
+                const runningEl = document.getElementById('runningText');
+                if (text && text.trim()) {
+                    runningEl.textContent = text.trim();
+                } else {
+                    runningEl.textContent = AppState.isOnline ? 
+                        "Tidak ada teks berjalan" : 
+                        "Mode Offline - Teks tersimpan";
+                }
+            }
+        };
+
+        // ======================== RUNNING TEXT SERVICE ========================
+        const RunningTextService = {
+            lines: [],
+            currentIndex: 0,
+            intervalId: null,
+            
+            loadRunningText: async function() {
+                try {
+                    const data = await NetworkService.fetchWithCache(CONFIG.RUNNING_TEXT_URL, CONFIG.RUNNING_TEXT_CACHE_KEY);
+                    this.lines = data.trim().split("\n").filter(line => line.trim() !== "");
+                    
+                    if (this.lines.length > 0) {
+                        AppState.currentRunningText = this.lines[0];
+                        this.startRotation();
+                        this.updateDisplay();
+                    }
+                    return this.lines;
+                } catch (error) {
+                    console.error("Error loading running text:", error);
+                    return [];
+                }
+            },
+            
+            startRotation: function() {
+                if (this.intervalId) {
+                    clearInterval(this.intervalId);
+                }
+                
+                if (this.lines.length > 1) {
+                    this.intervalId = setInterval(() => {
+                        this.currentIndex = (this.currentIndex + 1) % this.lines.length;
+                        this.updateDisplay();
+                    }, 8000); // Ganti teks setiap 8 detik
+                }
+            },
+            
+            updateDisplay: function() {
+                if (this.lines.length > 0) {
+                    RadarService.updateRunningText(this.lines[this.currentIndex]);
+                }
             }
         };
 
@@ -1130,17 +1224,21 @@
             if (AppState.isOnline) {
                 NotificationService.showToast("Koneksi internet pulih");
                 try {
+                    // Update running text
+                    await RunningTextService.loadRunningText();
+                    
+                    // Update hanpangan
                     const hanpanganData = await HanpanganService.getCurrentHanpangan();
                     RadarService.updateHanpanganDisplay(hanpanganData.current);
                     
+                    // Update subtitle
                     const subtitle = await NetworkService.fetchWithCache(CONFIG.BANNER_SUBTITLE_URL, CONFIG.BANNER_SUBTITLE_CACHE_KEY);
                     const subtitleLines = subtitle.trim().split("\n").filter(line => line.trim() !== "");
                     
                     if (subtitleLines.length > 0) {
                         RadarService.updateRadarDisplay(
                             "Koramil 1609-05/Sukasada",
-                            subtitleLines[0],
-                            `Hanpangan hari ini : ${hanpanganData.current}`
+                            subtitleLines[0]
                         );
                     }
                 } catch (error) {
@@ -1150,9 +1248,13 @@
                 NotificationService.showToast("Internet terputus! Mode offline aktif");
                 RadarService.updateRadarDisplay(
                     "Koramil 1609-05/Sukasada",
-                    "Mode Offline",
-                    "Hanpangan : (Data tersimpan)"
+                    "Mode Offline"
                 );
+                RadarService.updateHanpanganDisplay(AppState.currentHanpangan || "Data tersimpan");
+                // Tampilkan teks berjalan terakhir yang tersimpan
+                if (RunningTextService.lines.length > 0) {
+                    RunningTextService.updateDisplay();
+                }
             }
         }
 
@@ -1171,6 +1273,8 @@
             document.addEventListener("visibilitychange", async () => {
                 if (!document.hidden && AppState.isOnline) {
                     try {
+                        await RunningTextService.loadRunningText();
+                        
                         const hanpanganData = await HanpanganService.getCurrentHanpangan();
                         RadarService.updateHanpanganDisplay(hanpanganData.current);
                         
@@ -1180,8 +1284,7 @@
                         if (subtitleLines.length > 0) {
                             RadarService.updateRadarDisplay(
                                 "Koramil 1609-05/Sukasada",
-                                subtitleLines[0],
-                                `Hanpangan Hari Ini : ${hanpanganData.current}`
+                                subtitleLines[0]
                             );
                         }
                     } catch (error) {
@@ -1192,11 +1295,17 @@
 
             RadarService.updateRadarDisplay(
                 "Koramil 1609-05/Sukasada",
-                "Memuat data...",
-                "Hanpangan : Loading..."
+                "Memuat data..."
             );
 
+            RadarService.updateRunningText("Memuat teks berjalan...");
+            RadarService.updateHanpanganDisplay("Loading...");
+
             try {
+                // Load running text
+                await RunningTextService.loadRunningText();
+                
+                // Load daftar nama piket
                 await ScheduleService.loadDaftarNama();
                 
                 ["nama1a", "nama1b", "nama2a", "nama2b", "nama3a", "nama3b", "nama4a", "nama4b"].forEach(
@@ -1212,8 +1321,7 @@
                 if (subtitleLines.length > 0) {
                     RadarService.updateRadarDisplay(
                         "Koramil 1609-05/Sukasada",
-                        subtitleLines[0],
-                        `Hanpangan hari ini : ${hanpanganData.current}`
+                        subtitleLines[0]
                     );
                 }
 
@@ -1222,6 +1330,8 @@
                 setInterval(async () => {
                     if (AppState.isOnline) {
                         try {
+                            await RunningTextService.loadRunningText();
+                            
                             const hanpanganData = await HanpanganService.getCurrentHanpangan();
                             RadarService.updateHanpanganDisplay(hanpanganData.current);
                             
@@ -1231,8 +1341,7 @@
                             if (subtitleLines.length > 0) {
                                 RadarService.updateRadarDisplay(
                                     "Koramil 1609-05/Sukasada",
-                                    subtitleLines[0],
-                                    `Hanpangan hari ini : ${hanpanganData.current}`
+                                    subtitleLines[0]
                                 );
                             }
                         } catch (error) {
